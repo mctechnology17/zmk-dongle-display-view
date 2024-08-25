@@ -1,0 +1,19 @@
+manifest:
+  remotes:
+    - name: urob
+      url-base: https://github.com/urob
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
+  projects:
+    # zmk firmware by @urob
+    - name: zmk
+      remote: urob
+      revision: main
+      import: app/west.yml
+
+    # include corne with dongle pro_micro and xiao compatible
+    - name: zmk-config
+      remote: mctechnology17
+      revision: main
+  self:
+    path: config

@@ -1,0 +1,8 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_DONGLE_DISPLAY_VIEW_PRO_MICRO
+    def_bool $(shields_list_contains,dongle_display_view_pro_micro)
+
+config SHIELD_DONGLE_DISPLAY_VIEW_SEEEDUINO_XIAO_BLE
+    def_bool $(shields_list_contains,dongle_display_view_seeeduino_xiao_ble)

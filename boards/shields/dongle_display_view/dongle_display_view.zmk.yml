@@ -1,0 +1,11 @@
+file_format: "1"
+id: dongle_display_view
+name: dongle_display!view
+type: shield
+url: https://github.com/mctechnology17/zmk-dongle-display-view
+requires: [nice_view_header]
+features:
+  - display
+siblings:
+  - dongle_display_view_pro_micro
+  - dongle_display_view_seeeduino_xiao_ble
