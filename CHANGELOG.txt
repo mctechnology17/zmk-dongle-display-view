@@ -9,6 +9,7 @@ How the versions work:
 # FEATURES NEXT (not released yet)
 =======================================
 # CHANGES
+- [x] README: versions, branches and tags explained
 - [x] CHANGELOG.txt added
 - [x] GitHub Actions build workflow removed
 
