@@ -3,6 +3,7 @@ https://github.com/mctechnology17/zmk-dongle-display-view/blob/main/CHANGELOG.tx
 
 How the versions work:
 - vX.Y.Z          released from the branch `main`
+- v0.0.3.N        fixes for ZMK v0.3, from the branch `zmk-v0.3`
 - New work is developed on the branch `dev`
 
 # FEATURES NEXT (not released yet)
@@ -11,12 +12,9 @@ How the versions work:
 - [x] CHANGELOG.txt added
 - [x] GitHub Actions build workflow removed
 
-# TODO
-- [ ] Verify the build with ZMK v0.3 (the branch `zmk-v0.3` is created after that)
-
-# FEATURES v0.0.3 (Nov 18, 2026)
+# FEATURES v0.0.3 (Nov 18, 2026) · ZMK v0.3
 =======================================
-First tagged version: snapshot of everything published until this date.
+First tagged version: snapshot of everything published until this date. Build verified with ZMK v0.3.
 
 # NEW FEATURES
 - [x] Initial shields: `dongle_display_view_pro_micro` and `dongle_display_view_seeeduino_xiao_ble`
