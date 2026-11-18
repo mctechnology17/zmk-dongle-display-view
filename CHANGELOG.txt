@@ -6,6 +6,16 @@ How the versions work (the third number is the ZMK version):
 - v0.0.4.N        versions for the next ZMK version (v0.4)
 - New work is developed on the branch `dev`
 
+# FEATURES v0.0.4 (not released yet, branch `zmk-v0.4`) · next ZMK (Zephyr 4.1)
+=======================================
+Migration to the next ZMK version. This branch does not build with ZMK v0.3: use `main` or `zmk-v0.3` for that.
+
+# CHANGES
+- [x] **LVGL 9** the battery symbol is drawn through a canvas layer (L8), the images use `LV_COLOR_FORMAT_I1`, lines use `lv_point_precise_t`
+- [x] **Output widget** handles `ZMK_TRANSPORT_NONE` (nothing connected)
+- [x] build.yaml uses the new board names (`nice_nano//zmk`, `puchi_ble//zmk`, `xiao_ble//zmk`)
+- [ ] Not tested on hardware yet
+
 # FEATURES NEXT (not released yet)
 =======================================
 # CHANGES

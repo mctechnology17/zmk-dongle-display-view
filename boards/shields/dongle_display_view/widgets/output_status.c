@@ -55,7 +55,7 @@ enum selection_line_state {
     selection_line_state_bt
 } current_selection_line_state;
 
-lv_point_t selection_line_points[] = { {0, 0}, {13, 0} }; // will be replaced with lv_point_precise_t 
+lv_point_precise_t selection_line_points[] = { {0, 0}, {13, 0} }; 
 
 struct output_status_state {
     struct zmk_endpoint_instance selected_endpoint;
@@ -67,7 +67,7 @@ struct output_status_state {
 
 static struct output_status_state get_state(const zmk_event_t *_eh) {
     return (struct output_status_state){
-        .selected_endpoint = zmk_endpoints_selected(),
+        .selected_endpoint = zmk_endpoint_get_selected(),
         .active_profile_index = zmk_ble_active_profile_index(),
         .active_profile_connected = zmk_ble_active_profile_is_connected(),
         .active_profile_bonded = !zmk_ble_active_profile_is_open(),
@@ -87,7 +87,7 @@ static void move_object_x(void *obj, int32_t from, int32_t to) {
     lv_anim_t a;
     lv_anim_init(&a);
     lv_anim_set_var(&a, obj);
-    lv_anim_set_time(&a, 200); // will be replaced with lv_anim_set_duration
+    lv_anim_set_duration(&a, 200);
     lv_anim_set_exec_cb(&a, anim_x_cb);
     lv_anim_set_path_cb(&a, lv_anim_path_overshoot);
     lv_anim_set_values(&a, from, to);
@@ -98,7 +98,7 @@ static void change_size_object(void *obj, int32_t from, int32_t to) {
     lv_anim_t a;
     lv_anim_init(&a);
     lv_anim_set_var(&a, obj);
-    lv_anim_set_time(&a, 200); // will be replaced with lv_anim_set_duration
+    lv_anim_set_duration(&a, 200);
     lv_anim_set_exec_cb(&a, anim_size_cb);
     lv_anim_set_path_cb(&a, lv_anim_path_ease_in_out);
     lv_anim_set_values(&a, from, to);
@@ -127,6 +127,9 @@ static void set_status_symbol(lv_obj_t *widget, struct output_status_state state
             change_size_object(selection_line, 11, 18);
             current_selection_line_state = selection_line_state_bt;
         }
+        break;
+    case ZMK_TRANSPORT_NONE:
+        // New in ZMK v0.4: nothing connected. The selection line stays where it was.
         break;
     }
 

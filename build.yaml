@@ -1,8 +1,8 @@
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_dongle_pro_micro nice_view_adapter dongle_display_view_pro_micro
-  - board: puchi_ble_v1
+  - board: puchi_ble//zmk
     shield: corne_dongle_pro_micro nice_view_adapter dongle_display_view_pro_micro
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: corne_dongle_xiao nice_view_adapter dongle_display_view_seeeduino_xiao_ble
