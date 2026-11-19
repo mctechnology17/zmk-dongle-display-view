@@ -10,6 +10,7 @@
 
 </div>
 <!-- mc-follow-top:end -->
+
 This is a mix between display_dongle by @englmaxi and
 [nice!view](https://nicekeyboards.com/nice-view) that allows you to use the
 nice!view display with your dongle.
