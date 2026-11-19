@@ -14,6 +14,6 @@ manifest:
     # include corne with dongle pro_micro and xiao compatible
     - name: zmk-config
       remote: mctechnology17
-      revision: main
+      revision: zmk-v0.4
   self:
     path: config
